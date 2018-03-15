@@ -1,0 +1,40 @@
+{{ define "title" }}RAM Facilities - Add{{ end }} {{ define "content" }}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h3 class="mb-0">New Facility</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" name="facilityadd" role="form" method="facility/add" action="POST">
+                    <div class="form-group">
+                        <label for="facilityName">Facility name</label>
+                        <input class="form-control" id="facilityName" name="facilityName" required type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="streetNum">Street number</label>
+                        <input class="form-control" id="streetNum" required type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="streetNum">Street name</label>
+                        <input class="form-control" id="streetName" required type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="facilityType">Facility type</label>
+                        <select id="facilityType" name="select" class="form-control">
+                            <option value="mohltc">MOHLTC Funded 1st Stage Treatment</option>
+                            <option value="nonMohltc">Non MOHLTC Housing</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-success btn-lg float-right" type="submit">Add facility</button>
+                    <button class="btn btn-outline-dark btn-lg float-right mr-5" onclick="goBack()">Cancel</button>
+                </form>
+            </div>
+            <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+    </div>
+</div>
+
+{{ end }}

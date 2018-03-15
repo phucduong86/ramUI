@@ -1,0 +1,115 @@
+/** GLOBAL CLASS STYLES **/
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+
+dd {
+    margin-bottom: 1em;
+}
+
+legend.legal {
+    margin-bottom: 0;
+    font-size: 14px;
+    border: 0;
+}
+
+
+/** GENERAL LAYOUT STYLES **/
+html, body {
+    height: 100%;
+    font-size: 0.935em;
+}
+
+h1, .h1 {
+    font-size: 2.5em;
+}
+
+h2, .h2 {
+    font-size: 1.688em;
+    margin-top: 10px;
+}
+
+h3, .h3 {
+    font-size: 1.313em;
+}
+
+h4, .h4 {
+    font-size: 1.188em;
+}
+
+h5, .h5 {
+    font-size: 1.064em;
+}
+
+h6, .h6 {
+    font-size: 1.064em;
+}
+
+/* Top Navbar */
+.navbar {
+    background-color: #222;
+    border-color: #090909;
+    min-height: 50px;
+}
+
+
+/* Media query changes */
+
+@media (max-width: 767px) {
+    h1, .h1 {
+        font-size: 2em;
+    }
+
+    h2, .h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+@media (max-width: 991px) {
+    h1, .h1 {
+        font-size: 2em;
+    }
+
+    h2, .h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+
+}
+
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    height: auto;
+    overflow: auto;
+    font-size: 1.1em; /* prev: 1.2em */
+    z-index: 9999;
+    display: block;
+    padding: 2px 0 3px;
+    text-align: center;
+    width: 100%;
+}
+

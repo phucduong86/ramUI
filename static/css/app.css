@@ -1,0 +1,63 @@
+.custom-focusable {
+    padding: 0 !important;
+}
+
+.custom-invisible {
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+#main-content {
+    margin-top: 60px;
+}
+
+.inverse-btn {
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+.inverse-btn:hover {
+    border: 3px solid white;
+    background-color: white;
+    color: #343a40;
+}
+input {
+    margin-bottom: 10px;
+}
+.form-signin-heading {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+}
+
+#footer {
+    margin-top: 40px;
+}
+
+body {
+    background-color: #fafcb5;
+}
+
+.add-new {
+    margin-bottom: 5px;
+}
+
+/*to fix hr not showing on screen, bootstrap quirks-possibly?*/
+hr {
+    display: block;
+    width:100%;
+}
+
+.required-field {
+    color: #800000;
+}
+legend {
+
+    font-size: 0.935rem;
+    font-weight: bold;
+}
+.bg-dark {
+    background-color: #222;
+}

@@ -1,63 +1,365 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/public/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="RAM APP">
+  <meta name="author" content="City of Ottawa">
+  <link rel="icon" href="static/ico/favicon.ico">
 
-    <title>Gorilla Toolkit Boilerplate</title>
+  <title>Residential Addition Management Application</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/css/site.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- Custom styles and scripts for this template -->
+  <link href="static/css/app.css" rel="stylesheet">
+  <link href="static/css/custom.css" rel="stylesheet">
+  <script src="static/js/app.js"></script>
 </head>
 
 <body>
-
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Gorilla Toolkit Boilerplate</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+    <header class="bg-dark">
+        <a class="skip-main custom-focusable" href="#main-content" tabindex="1">Skip to main content</a>
+    <nav class="container navbar navbar-expand navbar-dark bg-dark d-flex flex-row flex-wrap align-items-center justify-content-between">
+        <a class="navbar-brand" href="/">
+            RAM APP
+        </a>
+        <div class="" id="nav-content">
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item" id="lang-toggle">
+                    <a class="inverse-btn btn btn-outline-success" href="#" role="button">FR
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="Preview" href="/user/edit" role="button" aria-haspopup="true"
+                        aria-expanded="false">
+                        Username@ottawa.ca
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="/login">Logout</a>
+                </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/signup">Signup</a></li>
-                <li><a href="/signin">Signin</a></li>
-            </ul>
+            </div>
+    </nav>
+</header>
 
-        </div><!--/.nav-collapse -->
+    <main role="main" id="main-content" tabindex="-1" class="container">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" href="/user">Users</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="/form">Forms</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="/facility">Facilities</a>
+          </nav>
+      
+
+      {{ template "content" . }}
+
+    </main>
+    <!-- /.container -->
+    <div class="bg-dark">
+        <div class="container footer bg-dark" id="footer">
+            <footer class="footer small">
+              <div class="container">
+                <div class="row">
+                  <div class="region region-footer panel-group panel-footer" id="AccordionMenu">
+                    <section id="block-ottawa-theme-helper-ott-footer-logo-block" class="col-md-5ths block block-ottawa-theme-helper clearfix">
+      
+      
+                      <img class="ottawa-logo logo pull-left hidden-sm-down" src="assets/img/logo-footer.png" alt="Brand mark of the city of Ottawa">
+                      <img class="ottawa-logo logo center-block hidden-md-up" src="assets/img/logo-footer.png" alt="Brand mark of the city of Ottawa">
+                    </section>
+                    <div class="panel col-md-5ths panel-default panel-footer">
+      
+                      <div class="panel-heading">
+                        <h2 class="panel-title">
+                          <div class="contactus-header hidden-sm-down">Contact</div>
+                          <a class="contactus-header-link hidden-md-up" data-toggle="collapse" data-parent="#AccordionMenu" href="#ContactUsCollapse">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Contact </a>
+                        </h2>
+                      </div>
+      
+                      <div class="contactus-content hidden-sm-down">
+                        <p class="contactus-title">
+                          <a target="_blank" href="https://ottawa.ca/en/city-hall/your-city-government/contact-city-ottawa" title="Contact Us (opens new window)">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Contact Us</a>
+                        </p>
+                        <address class="contactus-address">City of Ottawa
+                          <br>110 Laurier Avenue West
+                          <br>Ottawa, ON K1P 1J1</address>
+                        <p class="contactus-311">
+                          <a href="tel:311">3-1-1</a>
+                          <br>
+                          <a href="tel:6135802400" class="sixonethree-link">613-580-2400</a>
+                          <br>
+                          <a href="tel:6135802401" class="sixonethree-link">TTY: 613-580-2401 </a>
+                        </p>
+                      </div>
+                      <div id="ContactUsCollapse" class="collapse panel-collapse contactus-content hidden-md-up" style="height: 0px;">
+                        <div class="panel-body">
+                          <p class="contactus-title">
+                            <a target="_blank" href="https://ottawa.ca/en/city-hall/your-city-government/contact-city-ottawa" title="Contact Us (opens new window)">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>Contact Us </a>
+                          </p>
+                          <address class="contactus-address">City of Ottawa
+                            <br>110 Laurier Avenue West
+                            <br>Ottawa, ON K1P 1J1</address>
+                          <p class="contactus-311">
+                            <a href="tel:311">3-1-1</a>
+                            <br>
+                            <a href="tel:6135802400" class="sixonethree-link">613-580-2400</a>
+                            <br>
+                            <a href="tel:6135802401" class="sixonethree-link">TTY: 613-580-2401 </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="hr-content hidden-md-up">
+                    <div class="panel panel-default col-md-5ths panel-footer">
+      
+                      <div class="panel-heading">
+                        <h2 class="panel-title">
+                          <div class="aboutus-header hidden-sm-down">About</div>
+                          <a class="aboutus-header-link hidden-md-up" role="button" data-toggle="collapse" data-parent="#AccordionMenu" href="#AboutUsCollapse"
+                            aria-expanded="false">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>About </a>
+                        </h2>
+                      </div>
+      
+                      <ul class="menu nav links-list panel-body aboutus hidden-sm-down">
+                        <li class="first leaf">
+                          <a target="_blank" href="http://ottawa.ca/en/city-hall/mayor-and-city-councillors" title="Mayor and Council (opens new window)">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Mayor and Council </a>
+                        </li>
+                        <li class="leaf">
+                          <a target="_blank" href="http://ottawa.ca/en/news" title="News (opens new window)">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>News</a>
+                        </li>
+                        <li class="last leaf">
+                          <a target="_blank" href="http://ottawa.ca/en/city-hall/jobs-city" title="Jobs (opens new window)">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Jobs</a>
+                        </li>
+                      </ul>
+                      <div class="hidden-md-up collapse panel-collapse" id="AboutUsCollapse" style="height: 0px;">
+                        <ul class="menu nav links-list panel-body aboutus">
+                          <li class="first leaf">
+                            <a target="_blank" href="http://ottawa.ca/en/city-hall/mayor-and-city-councillors" title="Mayor and Council (opens new window)">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>Mayor and Council</a>
+                          </li>
+                          <li class="leaf">
+                            <a target="_blank" href="http://ottawa.ca/en/news" title="News (opens new window)">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>News</a>
+                          </li>
+                          <li class="last leaf">
+                            <a target="_blank" href="http://ottawa.ca/en/city-hall/jobs-city" title="Jobs (opens new window)">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>Jobs</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <hr class="hr-content hidden-md-up">
+                    <div class="panel panel-default col-md-5ths panel-footer">
+      
+                      <div class="panel-heading">
+                        <h2 class="panel-title">
+                          <div class="followus-header hidden-sm-down">Connect</div>
+                          <a class="followus-header-link hidden-md-up" role="button" data-toggle="collapse" data-parent="#AccordionMenu" href="#FollowUsCollapse"
+                            aria-expanded="false">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Connect </a>
+                        </h2>
+                      </div>
+      
+                      <ul class="menu nav panel-body followus hidden-sm-down">
+                        <li class="first leaf no-gt">
+                          <a href="https://www.facebook.com/cityofottawa" title="Facebook (opens new window)" target="_blank" class="ext">
+                            <span class="fa fa-facebook-square" aria-hidden="true"></span> Facebook</a>
+                        </li>
+                        <li class="leaf no-gt">
+                          <a href="https://www.youtube.com/user/cityottawa" title="Youtube (opens new window)" target="_blank" class="ext">
+                            <span class="fa fa-youtube-square" aria-hidden="true"></span> Youtube </a>
+                        </li>
+                        <li class="leaf no-gt">
+                          <a href="https://twitter.com/ottawacity" title="Twitter feeds (opens new window)" target="_blank" class="ext">
+                            <span class="fa fa-twitter-square" aria-hidden="true"></span> Twitter feeds </a>
+                        </li>
+                        <li class="leaf no-gt">
+                          <a href="https://www.instagram.com/cityofottawa/" title="Instagram (opens new window)" target="_blank"
+                            class="ext">
+                            <span class="fa fa-instagram" aria-hidden="true"></span> Instagram</a>
+                        </li>
+                        <li class="leaf ">
+                          <a href="/subscriptions/esub">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Sign up for e-newsletters</a>
+                        </li>
+                        <li class="leaf">
+                          <a href="http://ottawa.ca/en/city-hall/app-gallery" title="Download apps (opens new window)" target="_blank">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Download apps</a>
+                        </li>
+                        <li class="last leaf">
+                          <a href="http://ottawa.ca/en/city-hall/your-city-government/policies-and-administrative-structure/protocols"
+                            title="More ways to connect with us (opens new window)" target="_blank">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>More ways to connect with us </a>
+                        </li>
+                      </ul>
+                      <div class="hidden-md-up collapse panel-collapse" id="FollowUsCollapse" style="height: 0px;">
+                        <ul class="menu nav panel-body followus">
+                          <li class="first leaf no-gt">
+                            <a href="https://www.facebook.com/cityofottawa" title="Facebook (opens new window)" target="_blank" class="ext">
+                              <span class="fa fa-facebook-square" aria-hidden="true"></span> Facebook</a>
+                          </li>
+                          <li class="leaf no-gt">
+                            <a href="https://www.youtube.com/user/cityottawa" title="Youtube (opens new window)" target="_blank"
+                              class="ext">
+                              <span class="fa fa-youtube-square" aria-hidden="true"></span> Youtube</a>
+                          </li>
+                          <li class="leaf no-gt">
+                            <a href="https://twitter.com/ottawacity" title="Twitter feeds (opens new window)" target="_blank" class="ext">
+                              <span class="fa fa-twitter-square" aria-hidden="true"></span> Twitter feeds</a>
+                          </li>
+                          <li class="leaf no-gt">
+                            <a href="https://www.instagram.com/cityofottawa/" title="Instagram (opens new window)" target="_blank"
+                              class="ext">
+                              <span class="fa fa-instagram" aria-hidden="true"></span> Instagram </a>
+                          </li>
+                          <li class="leaf">
+                            <a href="/subscriptions/esub">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>Sign up for e-newsletters </a>
+                          </li>
+                          <li class="leaf">
+                            <a href="http://ottawa.ca/en/city-hall/app-gallery" title="Download Apps (opens new window)" target="_blank">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>Download Apps </a>
+                          </li>
+                          <li class="last leaf">
+                            <a href="http://ottawa.ca/en/city-hall/your-city-government/policies-and-administrative-structure/protocols"
+                              title="More ways to connect with us (opens new window)" target="_blank">
+                              <span class="fa fa-angle-right" aria-hidden="true"></span>More ways to connect with us </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <hr class="hr-content hidden-md-up">
+                    <div class="panel col-md-5ths panel-default panel-footer">
+      
+                      <div class="panel-heading">
+                        <h2 class="panel-title">
+                          <div class="feedback-header hidden-sm-down">Feedback</div>
+                          <a class="feedback-header-link hidden-md-up" data-toggle="collapse" data-parent="#AccordionMenu" href="#FeedbackCollapse">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>Feedback </a>
+                        </h2>
+                      </div>
+      
+                      <div class="feedback-content hidden-sm-down">
+                        <p class="feedback-title">Send us your feedback. We would love to hear from you!</p>
+                        <p>
+                          <a href="https://ottawa.ca/en/myserviceottawa-feedback" title="Feedback (opens new window)" target="_blank"
+                            class="footer-button btn-outline">Feedback</a>
+                        </p>
+                      </div>
+                      <div id="FeedbackCollapse" class="feedback-content collapse panel-collapse hidden-md-up" style="height: 0px;">
+                        <div class="panel-body">
+                          <p class="feedback-title">Send us your feedback. We would love to hear from you!</p>
+                          <p>
+                            <a href="https://ottawa.ca/en/myserviceottawa-feedback" title="Feedback (opens new window)" target="_blank"
+                              class="footer-button btn-outline">Feedback</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="hr-content hidden-md-up">
+                    <section id="block-ottawa-theme-helper-ott-footer-copyright-block" class="block block-ottawa-theme-helper clearfix">
+      
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer baseline">
+                <div class="row hidden-sm-down text-center">
+                  <ul class="list-inline">
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accountability-and-transparency/privacy-statement" title="Privacy (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Privacy </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accessibility-services" title="Accessibility (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Accessibility </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accountability-and-transparency/disclaimer" title="Disclaimer (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Disclaimer </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en" title="Visit ottawa.ca (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Visit ottawa.ca</a>
+                    </li>
+                    <li class="no-gt">
+                      <p class="contactus-copyright">&copy; 2001-2017 City of Ottawa</p>
+                    </li>
+                  </ul>
+                </div>
+      
+                <div class="row hidden-xs hidden-md-up text-center">
+                  <ul class="list-inline">
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accountability-and-transparency/privacy-statement" title="Privacy (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Privacy </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accessibility-services" title="Accessibility (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Accessibility </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accountability-and-transparency/disclaimer" title="Disclaimer (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Disclaimer </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://ottawa.ca/en" title="Visit ottawa.ca (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Visit ottawa.ca</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row hidden-xs hidden-md-up text-center">
+                  <p class="contactus-copyright">&copy; 2001-2017 City of Ottawa</p>
+                </div>
+      
+                <div class="row hidden-sm-up">
+                  <ul class="list-inline">
+                    <li class="col-xs-3 offset-xs-3">
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accountability-and-transparency/privacy-statement" title="Privacy (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Privacy </a>
+                    </li>
+                    <li class="col-xs-6 offset-xs-6">
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accessibility-services" title="Accessibility (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Accessibility </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row hidden-sm-up">
+                  <ul class="list-inline">
+                    <li class="col-xs-3 offset-xs-3">
+                      <a target="_blank" href="https://ottawa.ca/en/city-hall/accountability-and-transparency/disclaimer" title="Disclaimer (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Disclaimer </a>
+                    </li>
+                    <li class="col-xs-6 offset-xs-6">
+                      <a target="_blank" href="https://ottawa.ca/en" title="Visit ottawa.ca (opens new window)">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>Visit ottawa.ca</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row hidden-sm-up text-center">
+                  <p class="contactus-copyright">&copy; 2001-2017 City of Ottawa</p>
+                </div>
+              </div>
+            </footer>
+          </div>
     </div>
-</div>
 
-<div class="container">
-    {{ template "content" . }}
-</div><!-- /.container -->
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="/public/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 </body>
+
 </html>

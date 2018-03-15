@@ -1,0 +1,26 @@
+{{ define "title" }}Contact{{ end }} {{ define "content" }}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h2 class="mb-0">Login</h2>
+            </div>
+            <div class="card-body">
+                <form class="form-signin" role="form" action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" name="email" required type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" id="password" type="password">
+                    </div>
+                    <button class="btn btn-success btn-lg float-right" type="submit">Login</button>
+                </form>
+            </div>
+            <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+    </div>
+</div>
+{{ end }}

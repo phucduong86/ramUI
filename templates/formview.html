@@ -1,0 +1,59 @@
+{{ define "title" }}Home{{ end }} {{ define "content" }}
+
+<h1>Forms Report</h1>
+
+<a href="/form/add" role="button" class="btn btn-success add-new">Add new form</a>
+<div class="row justify-content-center">
+    <div class="col-sm-12">
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h2 class="mb-0">Forms</h2>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm table-bordered table-hover">
+                    <caption>List of RAM forms in the system</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Submitted by</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>114441</td>
+                            <td>Alex Fabino</td>
+                            <td>Submitted</td>
+                            <td>System user 1</td>
+                            <td>
+                                <a href="#">Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>119841</td>
+                            <td>Christian Suziki</td>
+                            <td>Hold</td>
+                            <td>System user 2</td>
+                            <td>
+                                <a href="#">Edit</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>114447</td>
+                            <td>Santoshi Kamuto</td>
+                            <td>Processed</td>
+                            <td>System user 3</td>
+                            <td>
+                                <a href="#">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

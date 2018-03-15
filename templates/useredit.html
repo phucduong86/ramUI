@@ -1,0 +1,78 @@
+{{ define "title" }}Home{{ end }} {{ define "content" }}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h2 class="mb-0">Edit user</h2>
+            </div>
+
+            <div class="card-body">
+                <form action="post" method="/user/edit" class="form" role="form">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input class="form-control" id="firstName" value="Thomas" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input class="form-control" id="lastName" value="Ferguson" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" value="Thomas.Ferguson@ottawa.ca" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">User role</label>
+                        <select id="userRole" name="select" class="form-control">
+                            <option value="1">Admin</option>
+                            <option value="2">Internal Staff</option>
+                            <option value="3">External Staff</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Preferred language</label>
+                        <select id="language" name="select" class="form-control">
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="password">New Password</label>
+                        <input class="form-control" id="password" placeholder="Password" required pattern=".{6,15}" type="password">
+                        <small class="form-text text-muted" id="passwordHelpBlock">Your password must be 8-15 characters long, contain letters and numbers, and must not contain spaces,
+                            special characters, or emoji.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm password</label>
+                        <input class="form-control" id="confirm_password" placeholder="Password (again)" required type="password">
+                    </div>
+                    <div class="form-group">
+                        
+                        <button class="btn btn-success btn-lg float-right" type="submit">Update</button>
+                        <button class="btn btn-dark btn-lg float-right mr-5" onclick="goBack()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /form card register -->
+    </div>
+</div>
+<script type="text/javascript">
+    var password = document.getElementById("password"),
+        confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword() {
+        if (password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
+
+{{ end }}

@@ -1,0 +1,54 @@
+{{ define "title" }}Home{{ end }} {{ define "content" }}
+
+<h1>Users</h1>
+<a href="/user/add" role="button" class="btn btn-success add-new">Add a user</a>
+<table class="table table-sm table-hover">
+    <caption>List of users</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark Otto</td>
+        <td>Ottmark.ottawa.ca</td>
+        <td><a href="/user/edit">Edit</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob Thornton</td>
+        <td>Thornton.jack@ottawa.ca</td>
+        <td><a href="/user/edit">Edit</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry Bird</td>
+        <td>theBird@ottawa.ca</td>
+        <td><a href="/user/edit">Edit</a></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Chris Taco</td>
+        <td>tacohcd@ottawa.ca</td>
+        <td><a href="/user/edit">Edit</a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Salah Rhobo</td>
+        <td>Robodd@ottawa.ca</td>
+        <td><a href="/user/edit">Edit</a></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Timothy Fudge</td>
+        <td>fudgemethy@ottawa.ca</td>
+        <td><a href="/user/edit">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+{{ end }}

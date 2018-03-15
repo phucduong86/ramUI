@@ -1,0 +1,234 @@
+{{ define "title" }}RAM Form New{{ end }} {{ define "content" }}
+<style type="text/css">
+    input[type=radio] {
+        position: absolute;
+        visibility: hidden;
+        display: none;
+    }
+</style>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+
+                <div class="card card-outline-secondary">
+                    <div class="card-header">
+                        <h2 class="mb-0">Residential Addition Form</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="post" method="/form/add" class="form" role="form">
+                            <div class="row mt-4">
+                                <div class="col-12 pb-3">
+                                    <label for="staffname">Staff member name</label>
+                                    <input class="form-control" type="text" value="< Staff's name >" readonly>
+                                </div>
+                                <div class="col-sm-6 pb-3">
+                                    <label for="firstName">First name
+                                        <span class="required-field">(required)</span>
+                                    </label>
+                                    <input class="form-control" id="firstName" type="text" required>
+                                </div>
+                                <div class="col-sm-6 pb-3">
+                                    <label for="lastName">Last name
+                                        <span class="required-field">(required)</span>
+                                    </label>
+                                    <input class="form-control" id="lastName" type="text" required>
+                                </div>
+                                <div class="col-12 pb-3">
+
+                                    <fieldset>
+                                        <legend aria-describedby="dob" class="fieldset-header">
+                                            Date of birth
+                                        </legend>
+                                        <small id="dob">For example: 20 Feb 1980</small>
+                                        <div class="form-row">
+                                            <div class="form-group col-2 col-sm-2">
+                                                <label for="birth_date">
+                                                    <small>Date</small>
+                                                </label>
+                                                <input id="birth_date" name="birth_date" type="number" size="2" maxlength="2" min="1" max="31" required="required" class="form-control">
+                                            </div>
+                                            <div class="form-group col-3 col-sm-2">
+                                                <label for="birth_month">
+                                                    <small>Month</small>
+                                                </label>
+                                                <select id="birth_month" name="birth_month" required="required" class="form-control custom-select">
+                                                    <option value="01">Jan</option>
+                                                    <option value="02">Feb</option>
+                                                    <option value="03">Mar</option>
+                                                    <option value="04">Apr</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">Jun</option>
+                                                    <option value="07">Jul</option>
+                                                    <option value="08">Aug</option>
+                                                    <option value="09">Sep</option>
+                                                    <option value="10">Oct</option>
+                                                    <option value="11">Nov</option>
+                                                    <option value="12">Dec</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-2 col-sm-2">
+                                                <label for="birth_year">
+                                                    <small>Year</small>
+                                                </label>
+                                                <input id="birth_year" name="birth_year" type="number" min="1900" max="2020" class="form-control" size="4" maxlength="4"
+                                                    required="required">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <hr>
+                                <div class="col-md-6 pb-3">
+                                    <label for="facility_name">Facility
+                                        <span class="required-field">(required)</span>
+                                    </label>
+                                    <select id="facility_name" name="facility_name" required class="form-control custom-select">
+                                        <option value="01">Jan</option>
+                                        <option value="02">Feb</option>
+                                        <option value="03">Mar</option>
+                                        <option value="04">Apr</option>
+                                        <option value="05">May</option>
+                                        <option value="06">Jun</option>
+                                        <option value="07">Jul</option>
+                                        <option value="08">Aug</option>
+                                        <option value="09">Sep</option>
+                                        <option value="10">Oct</option>
+                                        <option value="11">Nov</option>
+                                        <option value="12">Dec</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 pb-3">
+                                    <label for="facility_phone" class="float-left">Phone Number
+                                        <span class="required-field">(required)</span>
+                                    </label>
+                                    <input type="text" id="facility_phone" class="form-control" required>
+                                </div>
+                                <div class="col-12 pb-3">
+                                    <fieldset>
+                                        <legend aria-describedby="dateenter" class="fieldset-header">Date entered facility</legend>
+                                        <small id="dateenter">For example: 20 Feb 2018</small>
+                                        <div class="form-row">
+                                            <div class="form-group col-3 col-sm-2">
+                                                <label for="dateenter_date">
+                                                    <small>Date</small>
+                                                </label>
+                                                <input id="dateenter_date" name="dateenter_date" type="text" size="4" maxlength="2" required="required" class="form-control">
+                                            </div>
+                                            <div class="form-group col-3 col-sm-2">
+                                                <label for="dateenter_month">
+                                                    <small>Month</small>
+                                                </label>
+                                                <select id="dateenter_month" name="dateenter_month" required="required" class="form-control custom-select">
+                                                    <option value="01">Jan</option>
+                                                    <option value="02">Feb</option>
+                                                    <option value="03">Mar</option>
+                                                    <option value="04">Apr</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">Jun</option>
+                                                    <option value="07">Jul</option>
+                                                    <option value="08">Aug</option>
+                                                    <option value="09">Sep</option>
+                                                    <option value="10">Oct</option>
+                                                    <option value="11">Nov</option>
+                                                    <option value="12">Dec</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-3 col-sm-2">
+                                                <label for="dateenter_year">
+                                                    <small>Year</small>
+                                                </label>
+                                                <input id="dateenter_year" name="dateenter_year" type="text" class="form-control" size="4" maxlength="4" required="required">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <hr>
+                                <div class="col-md-6 pb-3">
+                                    <fieldset class="form-group">
+                                        <legend class="fieldset-header">Board and lodging or renting</legend>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-outline-dark" for="board">
+                                                <input type="radio" name="boardOrRent" id="board" value="board" required>Board and Lodging
+                                            </label>
+                                            <label class="btn btn-outline-dark" for="rent">
+                                                <input type="radio" name="boardOrRent" id="rent" value="rent">Renting
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6 pb-3">
+                                    <fieldset class="form-group col">
+                                        <legend class="fieldset-header">Transportation required?</legend>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-outline-dark" for="transportTrue">
+                                                <input type="radio" name="transport" id="transportTrue" value="true" required> Yes
+                                            </label>
+                                            <label class="btn btn-outline-dark" for="transportFalse">
+                                                <input type="radio" name="transport" id="transportFalse" value="false"> No
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6 pb-3">
+                                    <fieldset class="form-group">
+                                        <legend class="fieldset-header">Is pay direct required?</legend>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-outline-dark" for="paydirectTrue">
+                                                <input type="radio" name="paydirect" id="paydirectTrue" value="true" required>Yes</label>
+                                            <label class="btn btn-outline-dark" for="paydirectFalse">
+                                                <input type="radio" name="paydirect" id="paydirectFalse" value="false">No</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6 pb-3">
+                                    <label for="monthlyamount">Monthly amount</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input class="form-control" id="monthlyamount" placeholder="Amount" type="number">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 pb-3">
+                                    <label for="aptpermonth">How many appointment a month?</label>
+                                    <input id="aptpermonth" name="aptpermonth" type="text" class="form-control">
+                                </div>
+                                <div class="col-12 pb-3">
+                                    <label for="mailingaddress">Mailing Address</label>
+                                    <textarea id="mailingaddress" name="mailingaddress" rows="3" class="form-control"></textarea>
+                                </div>
+                                <div class="col-12 pt-5 pb-3">
+                                    <strong>I consent that all the information provided in this form is accurate</strong>
+                                    <br/>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="invalidCheck">
+                                            <input class="form-check-input" type="checkbox" id="invalidCheck" required> I agree.
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-footer">
+                                <button class="btn btn-outline-dark btn-lg float-left mr-5" onclick="goBack()">Cancel</button>
+                                <button class="btn btn-success btn-lg float-left" type="submit">Submit form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--/card-->
+            </div>
+        </div>
+        <!--/row-->
+    </div>
+    <!--/col-->
+</div>
+<!--/row-->
+
+{{ end }}
